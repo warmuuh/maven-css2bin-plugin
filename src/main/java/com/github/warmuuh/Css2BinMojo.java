@@ -59,7 +59,8 @@ public class Css2BinMojo extends AbstractMojo {
 	private void generateBinaryStyleSheet(File input) throws IOException {
         Path relativePath = input.toPath().relativize(inputDirectory.toPath());
         File outputFile = outputDirectory.toPath().resolve(relativePath).toFile();
-
+		outputFile = new File(outputFile.toString().replace(".css", ".bss"));
+        getLog().info(input + " --> " + outputFile);
         File parentFile = outputFile.getParentFile();
         if (!parentFile.exists() && !parentFile.mkdirs()){
             throw new IOException("Failed to create directory for " + parentFile);
