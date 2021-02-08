@@ -7,7 +7,7 @@
 
   <groupId>com.github.warmuuh</groupId>
   <artifactId>maven-css2bin-plugin</artifactId>
-  <version>main-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>maven-plugin</packaging>
 
   <name>maven-css2bin-plugin Maven Plugin</name>
